@@ -27,7 +27,13 @@ export const Navbar = () => {
             onMouseEnter={() => handleMouseOn(index)}
             onMouseLeave={handleMouseOff}
           >
-            <Link to={`/${item.toLowerCase()}`}>{item}</Link>
+            <Link
+              to={
+                item.toLowerCase() === "shop" ? "/" : `/${item.toLowerCase()}`
+              }
+            >
+              {item}
+            </Link>
           </li>
         ))}
       </ul>
