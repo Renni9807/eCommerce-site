@@ -12,12 +12,12 @@ export const Navbar = () => {
   const handleMouseOff = () => {
     setHovered("");
   };
-  const navMenuItems = ["Shop", "Men", "Women", "Kids"];
+  const navMenuItems = ["Shop", "Clothes", "Women", "Kids"];
   return (
     <div className="navbar">
       <div className="nav-logo">
         <img src={logo} alt="logo"></img>
-        <p>SHOPPER</p>
+        <p>REPPOHS</p>
       </div>
       <ul className="nav-menu">
         {navMenuItems.map((item, index) => (

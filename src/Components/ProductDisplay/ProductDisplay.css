@@ -1,0 +1,140 @@
+.productdisplay {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productdisplay-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.productdisplay-img-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.productdisplay-img-list img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.productdisplay-img-list img:hover {
+  transform: scale(1.1);
+}
+
+.productdisplay-img {
+  display: flex;
+  justify-content: center;
+}
+
+.productdisplay-main-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.productdisplay-right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.productdisplay-right h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.productdisplay-right-star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.productdisplay-right-star img {
+  width: 20px;
+  height: 20px;
+}
+
+.productdisplay-right-star p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.productdisplay-right-prices {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.productdisplay-right-price-old {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.productdisplay-right-price-new {
+  font-size: 1.5rem;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.productdisplay-right-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.productdisplay-right-size {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productdisplay-right-size div {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.productdisplay-right-size div:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+productdisplay-right button {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+productdisplay-right button:hover {
+  background-color: #c0392b;
+}
+
+.productdisplay-right-category {
+  font-size: 1rem;
+  color: #888;
+}
+
+.productdisplay-right-category span {
+  font-weight: bold;
+}

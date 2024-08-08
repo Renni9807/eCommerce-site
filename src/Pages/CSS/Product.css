@@ -1,0 +1,6 @@
+.product {
+  width: 80vw;
+  margin: 30px auto;
+  display: grid;
+  gap: 30px;
+}
