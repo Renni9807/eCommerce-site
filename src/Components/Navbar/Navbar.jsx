@@ -1,8 +1,7 @@
-import { useState } from "react";
-import logo from "../Assets/logo.png";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import cart_icon from "../Assets/cart_icon.png";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [hovered, setHovered] = useState("");
@@ -12,12 +11,11 @@ export const Navbar = () => {
   const handleMouseOff = () => {
     setHovered("");
   };
-  const navMenuItems = ["Shop", "Clothes", "Women", "Kids"];
+  const navMenuItems = ["Shop", "Clothes", "Shoe", "Jewelry"];
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={logo} alt="logo"></img>
-        <p>REPPOHS</p>
+        <p>LEAP</p>
       </div>
       <ul className="nav-menu">
         {navMenuItems.map((item, index) => (
@@ -41,7 +39,6 @@ export const Navbar = () => {
         <Link to="/login">
           <button>Login</button>
         </Link>
-
         <div className="cart">
           <Link to="/cart">
             <img id="img-cart" src={cart_icon} alt="cart_icon" />

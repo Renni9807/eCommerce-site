@@ -1,5 +1,5 @@
 .hero-bg {
-  background: linear-gradient(to bottom, #fff, #fff, #ffb6c1);
+  background: linear-gradient(to bottom, #fff, rgb(52, 9, 92), #d3d3d3);
 }
 
 .hero {
@@ -46,7 +46,7 @@
   height: 4.2rem;
   padding: 0.5rem;
   border-radius: 70px;
-  background-color: #ff4141;
+  background-color: #ababab;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 500;

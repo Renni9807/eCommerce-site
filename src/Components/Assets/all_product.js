@@ -34,6 +34,45 @@ import p33_img from "./product_33.png";
 import p34_img from "./product_34.png";
 import p35_img from "./product_35.png";
 import p36_img from "./product_36.png";
+import p37_img from "./product_37.png";
+import p38_img from "./product_38.png";
+import p39_img from "./product_39.png";
+import p40_img from "./product_40.png";
+import p41_img from "./product_41.png";
+import p42_img from "./product_42.png";
+import p43_img from "./product_43.png";
+import p44_img from "./product_44.png";
+import p45_img from "./product_45.png";
+import p46_img from "./product_46.png";
+import p47_img from "./product_47.png";
+import p48_img from "./product_48.png";
+import p49_img from "./product_49.png";
+import p50_img from "./product_50.png";
+import p51_img from "./product_51.png";
+import p52_img from "./product_52.png";
+import p53_img from "./product_53.png";
+import p54_img from "./product_54.png";
+import p55_img from "./product_55.png";
+import p56_img from "./product_56.png";
+import p57_img from "./product_57.png";
+import p58_img from "./product_58.png";
+import p59_img from "./product_59.png";
+import p60_img from "./product_60.png";
+import p61_img from "./product_61.png";
+import p62_img from "./product_62.png";
+import p63_img from "./product_63.png";
+import p64_img from "./product_64.png";
+import p65_img from "./product_65.png";
+import p66_img from "./product_66.png";
+import p67_img from "./product_67.png";
+import p68_img from "./product_68.png";
+import p69_img from "./product_69.png";
+import p70_img from "./product_70.png";
+import p71_img from "./product_71.png";
+import p72_img from "./product_72.png";
+import p73_img from "./product_73.png";
+import p74_img from "./product_74.png";
+import p75_img from "./product_75.png";
 
 let all_product = [
   {
@@ -395,6 +434,396 @@ let all_product = [
     old_price: 150.0,
     description:
       "A casual smart look featuring a brown sweater, plaid pants, and brown shoes. The outfit is perfect for a relaxed yet polished appearance. Total outfit cost: approximately $180.",
+  },
+  {
+    id: 37,
+    name: "Sneaker Low Top",
+    image: p37_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$75.00",
+    old_price: "$100.00",
+    description: "A versatile low top sneaker perfect for casual outings.",
+  },
+  {
+    id: 38,
+    name: "Running Shoes",
+    image: p38_img,
+    category: "Shoes",
+    size: "S, M, L, XL",
+    new_price: "$120.00",
+    old_price: "$150.00",
+    description: "Lightweight running shoes designed for comfort and speed.",
+  },
+  {
+    id: 39,
+    name: "Leather Boots",
+    image: p39_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$130.00",
+    old_price: "$180.00",
+    description: "Durable leather boots suitable for outdoor adventures.",
+  },
+  {
+    id: 40,
+    name: "Slip-On Loafers",
+    image: p40_img,
+    category: "Shoes",
+    size: "S, M, L, XL",
+    new_price: "$90.00",
+    old_price: "$120.00",
+    description: "Comfortable slip-on loafers ideal for casual wear.",
+  },
+  {
+    id: 41,
+    name: "High Heel Sandals",
+    image: p41_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$85.00",
+    old_price: "$110.00",
+    description: "Stylish high heel sandals for elegant occasions.",
+  },
+  {
+    id: 42,
+    name: "Hiking Boots",
+    image: p42_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$140.00",
+    old_price: "$200.00",
+    description: "Rugged hiking boots designed for tough terrains.",
+  },
+  {
+    id: 43,
+    name: "Classic Oxfords",
+    image: p43_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$110.00",
+    old_price: "$150.00",
+    description: "Elegant classic Oxfords for formal wear.",
+  },
+  {
+    id: 44,
+    name: "Casual Espadrilles",
+    image: p44_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$60.00",
+    old_price: "$80.00",
+    description: "Light and breathable espadrilles for casual outings.",
+  },
+  {
+    id: 45,
+    name: "Sports Sneakers",
+    image: p45_img,
+    category: "Shoes",
+    size: "S, M, L, XL",
+    new_price: "$95.00",
+    old_price: "$130.00",
+    description: "High-performance sports sneakers for all activities.",
+  },
+  {
+    id: 46,
+    name: "Elegant Pumps",
+    image: p46_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$100.00",
+    old_price: "$130.00",
+    description: "Elegant pumps perfect for formal events.",
+  },
+  {
+    id: 47,
+    name: "Canvas Sneakers",
+    image: p47_img,
+    category: "Shoes",
+    size: "S, M, L, XL",
+    new_price: "$55.00",
+    old_price: "$70.00",
+    description: "Casual canvas sneakers for everyday wear.",
+  },
+  {
+    id: 48,
+    name: "Chelsea Boots",
+    image: p48_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$125.00",
+    old_price: "$160.00",
+    description: "Stylish Chelsea boots suitable for various outfits.",
+  },
+  {
+    id: 49,
+    name: "Ankle Strap Sandals",
+    image: p49_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$70.00",
+    old_price: "$90.00",
+    description: "Chic ankle strap sandals for summer days.",
+  },
+  {
+    id: 50,
+    name: "Basketball Shoes",
+    image: p50_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$130.00",
+    old_price: "$170.00",
+    description: "High-top basketball shoes for maximum performance.",
+  },
+  {
+    id: 51,
+    name: "Ballet Flats",
+    image: p51_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$50.00",
+    old_price: "$65.00",
+    description: "Comfortable ballet flats for everyday use.",
+  },
+  {
+    id: 52,
+    name: "Trail Running Shoes",
+    image: p52_img,
+    category: "Shoes",
+    size: "S, M, L, XL",
+    new_price: "$115.00",
+    old_price: "$145.00",
+    description: "Durable trail running shoes for outdoor adventures.",
+  },
+  {
+    id: 53,
+    name: "Moccasins",
+    image: p53_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$80.00",
+    old_price: "$100.00",
+    description: "Classic moccasins perfect for casual wear.",
+  },
+  {
+    id: 54,
+    name: "Platform Heels",
+    image: p54_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$95.00",
+    old_price: "$120.00",
+    description: "Fashionable platform heels for a stylish look.",
+  },
+  {
+    id: 55,
+    name: "Slip-On Sneakers",
+    image: p55_img,
+    category: "Shoes",
+    size: "S, M, L, XL",
+    new_price: "$60.00",
+    old_price: "$80.00",
+    description: "Convenient slip-on sneakers for everyday comfort.",
+  },
+  {
+    id: 56,
+    name: "Chukka Boots",
+    image: p56_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$105.00",
+    old_price: "$140.00",
+    description: "Stylish Chukka boots suitable for any occasion.",
+  },
+  {
+    id: 57,
+    name: "Gladiator Sandals",
+    image: p57_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$65.00",
+    old_price: "$85.00",
+    description: "Trendy gladiator sandals for a bold look.",
+  },
+  {
+    id: 58,
+    name: "Lace-Up Boots",
+    image: p58_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$120.00",
+    old_price: "$160.00",
+    description: "Classic lace-up boots for a rugged style.",
+  },
+  {
+    id: 59,
+    name: "Clogs",
+    image: p59_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$45.00",
+    old_price: "$60.00",
+    description: "Comfortable clogs for everyday wear.",
+  },
+  {
+    id: 60,
+    name: "Espadrille Wedges",
+    image: p60_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$70.00",
+    old_price: "$90.00",
+    description: "Stylish espadrille wedges for a chic look.",
+  },
+  {
+    id: 61,
+    name: "Derby Shoes",
+    image: p61_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$110.00",
+    old_price: "$140.00",
+    description: "Elegant Derby shoes for formal occasions.",
+  },
+  {
+    id: 62,
+    name: "Wedge Sandals",
+    image: p62_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$85.00",
+    old_price: "$110.00",
+    description: "Comfortable wedge sandals for summer.",
+  },
+  {
+    id: 63,
+    name: "Combat Boots",
+    image: p63_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$135.00",
+    old_price: "$180.00",
+    description: "Tough combat boots for an edgy look.",
+  },
+  {
+    id: 64,
+    name: "Pointed Toe Flats",
+    image: p64_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$50.00",
+    old_price: "$65.00",
+    description: "Sleek pointed toe flats for everyday elegance.",
+  },
+  {
+    id: 65,
+    name: "Flip-Flops",
+    image: p65_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$20.00",
+    old_price: "$25.00",
+    description: "Comfortable flip-flops for casual wear.",
+  },
+  {
+    id: 66,
+    name: "Oxford Brogues",
+    image: p66_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$125.00",
+    old_price: "$160.00",
+    description: "Classic Oxford brogues with intricate detailing.",
+  },
+  {
+    id: 67,
+    name: "Running Shoes",
+    image: p67_img,
+    category: "Shoes",
+    size: "S, M, L, XL",
+    new_price: "$110.00",
+    old_price: "$140.00",
+    description: "Comfortable running shoes for everyday use.",
+  },
+  {
+    id: 68,
+    name: "Leather Loafers",
+    image: p68_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$95.00",
+    old_price: "$130.00",
+    description: "Elegant leather loafers for formal occasions.",
+  },
+  {
+    id: 69,
+    name: "High Heels",
+    image: p69_img,
+    category: "Shoes",
+    size: "S, M, L",
+    new_price: "$75.00",
+    old_price: "$100.00",
+    description: "Stylish high heels for a chic look.",
+  },
+  {
+    id: 70,
+    name: "Hiking Boots",
+    image: p70_img,
+    category: "Shoes",
+    size: "M, L, XL",
+    new_price: "$150.00",
+    old_price: "$200.00",
+    description: "Durable hiking boots for outdoor adventures.",
+  },
+  {
+    id: 71,
+    name: "Sandals",
+    image: p71_img,
+    category: "Shoes",
+    size: "S, M, L, XL",
+    new_price: "$40.00",
+    old_price: "$55.00",
+    description: "Comfortable sandals for summer.",
+  },
+  {
+    id: 72,
+    name: "Sneakers",
+    image: p72_img,
+    category: "Shoes",
+    size: "S, M, L, XL",
+    new_price: "$85.00",
+    old_price: "$110.00",
+    description: "Trendy sneakers for casual wear.",
+  },
+  {
+    id: 73,
+    name: "Elegant Gold Necklace",
+    category: "Jewelry",
+    image: p73_img,
+    new_price: "$250.00",
+    old_price: "$300.00",
+    description:
+      "A beautifully crafted gold necklace that adds elegance to any outfit.",
+  },
+  {
+    id: 74,
+    name: "Pearl Necklace Set",
+    category: "Jewelry",
+    image: p74_img,
+    new_price: "$200.00",
+    old_price: "$250.00",
+    description:
+      "A stunning pearl necklace set that includes matching earrings.",
+  },
+  {
+    id: 75,
+    name: "Gold and Pearl Bracelets",
+    category: "Jewelry",
+    image: p75_img,
+    new_price: "$180.00",
+    old_price: "$220.00",
+    description:
+      "A set of gold and pearl bracelets that add a touch of sophistication.",
   },
 ];
 

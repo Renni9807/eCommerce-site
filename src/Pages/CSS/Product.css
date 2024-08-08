@@ -1,6 +1,42 @@
 .product {
-  width: 80vw;
-  margin: 30px auto;
-  display: grid;
-  gap: 30px;
+  padding: 20px;
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+}
+
+.product-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-display img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-display h1 {
+  margin: 20px 0;
+}
+
+.product-description {
+  margin: 20px 0;
+}
+
+.product-prices {
+  display: flex;
+  gap: 10px;
+}
+
+.product-price-new {
+  font-size: 1.5em;
+  color: green;
+}
+
+.product-price-old {
+  font-size: 1.2em;
+  color: red;
+  text-decoration: line-through;
 }

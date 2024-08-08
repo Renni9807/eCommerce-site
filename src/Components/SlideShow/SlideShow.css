@@ -1,3 +1,4 @@
+/* SlideShow.css */
 .slide-container {
   position: relative;
   display: flex;
@@ -5,21 +6,23 @@
   align-items: center;
   width: 100%;
   max-width: 1000px;
-  height: 600px; /* Increased height for the slide container */
+  height: 600px;
   margin: auto;
   overflow: hidden;
 }
 
 .slide {
   opacity: 0;
-  transition: opacity ease-in-out 0.5s;
+  transform: translate(0, 0);
+  transition: opacity ease-in-out 1s, transform ease-in-out 1s;
   position: absolute;
   width: 100%;
-  height: 100%; /* Ensure the slide takes full height */
+  height: 100%;
 }
 
 .slide.active {
   opacity: 1;
+  transform: translate(0, 0);
 }
 
 .left-arrow,
@@ -44,7 +47,37 @@
 
 .slide-image {
   width: 100%;
-  height: 100%; /* Ensure the image takes the full height of the container */
+  height: 100%;
   object-fit: contain;
   display: block;
+}
+
+@keyframes fadeOutLeftDown {
+  from {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-20%, 20%);
+  }
+}
+
+@keyframes fadeInRightTop {
+  from {
+    opacity: 0;
+    transform: translate(20%, -20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.slide-leaving {
+  animation: fadeOutLeftDown 1s forwards;
+}
+
+.slide-entering {
+  animation: fadeInRightTop 1s forwards;
 }

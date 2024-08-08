@@ -1,13 +1,22 @@
-import React, { useState } from "react";
-import "./ProductDisplay.css";
+import React, { useState, useContext } from "react";
+import { ShopContext } from "../../Context/ShopContext";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
 import Modal from "../Modal/Modal";
+import "./ProductDisplay.css";
 
 export const ProductDisplay = (props) => {
   const { product } = props;
+  const { addToCart } = useContext(ShopContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
+  const [quantities, setQuantities] = useState({
+    S: 0,
+    M: 0,
+    L: 0,
+    XL: 0,
+    XXL: 0,
+  });
 
   const openModal = (image) => {
     setModalImage(image);
@@ -16,6 +25,36 @@ export const ProductDisplay = (props) => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleQuantityChange = (size, increment) => {
+    setQuantities((prev) => ({
+      ...prev,
+      [size]: Math.max(0, prev[size] + increment),
+    }));
+  };
+
+  const handleAddToCart = () => {
+    const itemsToAdd = Object.keys(quantities).reduce((acc, size) => {
+      if (quantities[size] > 0) {
+        acc.push({ ...product, quantity: quantities[size], size });
+      }
+      return acc;
+    }, []);
+
+    if (itemsToAdd.length > 0) {
+      itemsToAdd.forEach((item) => addToCart(item));
+      setQuantities({
+        S: 0,
+        M: 0,
+        L: 0,
+        XL: 0,
+        XXL: 0,
+      });
+      alert("Items added to cart successfully");
+    } else {
+      alert("Please select a quantity for at least one size");
+    }
   };
 
   return (
@@ -52,7 +91,7 @@ export const ProductDisplay = (props) => {
         </div>
       </div>
       <div className="productdisplay-right">
-        <h1>{product.name} </h1>
+        <h1>{product.name}</h1>
         <div className="productdisplay-right-star">
           <img src={star_icon} alt="" />
           <img src={star_icon} alt="" />
@@ -63,10 +102,10 @@ export const ProductDisplay = (props) => {
         </div>
         <div className="productdisplay-right-prices">
           <div className="productdisplay-right-price-old">
-            {product.old_price}
+            ${product.old_price}
           </div>
           <div className="productdisplay-right-price-new">
-            {product.new_price}
+            ${product.new_price}
           </div>
         </div>
         <div className="productdisplay-right-description">
@@ -74,15 +113,18 @@ export const ProductDisplay = (props) => {
         </div>
         <div className="productdisplay-right-size">
           <h1>Select Size</h1>
-          <div className="productdisplay-right-size">
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div>XXL</div>
-          </div>
+          {["S", "M", "L", "XL", "XXL"].map((size) => (
+            <div key={size} className="quantity-selector">
+              <button onClick={() => handleQuantityChange(size, -1)}>-</button>
+              <span>{quantities[size]}</span>
+              <button onClick={() => handleQuantityChange(size, 1)}>+</button>
+              <span>{size}</span>
+            </div>
+          ))}
         </div>
-        <button>ADD TO CART</button>
+        <button Id="add-cart" onClick={handleAddToCart}>
+          ADD TO CART
+        </button>
         <p className="productdisplay-right-category">
           <span>Category: </span>Women, T-Shirt, Crop Top
         </p>
@@ -94,3 +136,5 @@ export const ProductDisplay = (props) => {
     </div>
   );
 };
+
+export default ProductDisplay;

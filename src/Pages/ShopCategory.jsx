@@ -6,18 +6,6 @@ import dropdown_icon from "../Components/Assets/dropdown_icon.png";
 import SlideShow from "../Components/SlideShow/SlideShow";
 import "./CSS/ShopCategory.css";
 
-import cloth_slide_1 from "../Components/Assets/cloth_slide_1.jpg";
-import cloth_slide_2 from "../Components/Assets/cloth_slide_2.jpg";
-import cloth_slide_3 from "../Components/Assets/cloth_slide_3.jpg";
-import cloth_slide_4 from "../Components/Assets/cloth_slide_4.png";
-
-const slides = [
-  { image: cloth_slide_1 },
-  { image: cloth_slide_2 },
-  { image: cloth_slide_3 },
-  { image: cloth_slide_4 },
-];
-
 const breakpointColumnsObj = {
   default: 4,
   1100: 3,
@@ -25,26 +13,34 @@ const breakpointColumnsObj = {
   500: 1,
 };
 
-export const ShopCategory = (props) => {
+const ShopCategory = ({ categorySlides, banner, category }) => {
   const { all_product } = useContext(ShopContext);
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // Assuming all_product has a height property precomputed
-    const initialItems = all_product.map((item) => ({
-      ...item,
-      height: item.height || Math.floor(Math.random() * 150) + 150, // Provide a random height if not precomputed
-    }));
-    setItems(initialItems);
-  }, [all_product]);
+    if (all_product && category) {
+      const filteredItems = all_product.filter(
+        (item) => item.category.toLowerCase() === category.toLowerCase()
+      );
+      setItems(filteredItems);
+    }
+  }, [all_product, category]);
 
   return (
     <div className="shop-category">
-      <SlideShow slides={slides} />
+      {categorySlides && categorySlides.length > 0 ? (
+        <SlideShow slides={categorySlides} />
+      ) : banner ? (
+        <img
+          src={banner}
+          alt={`${category} banner`}
+          className="category-banner"
+        />
+      ) : null}
       <div className="shopcategory-indexSort">
         <p>
-          <span>{items.length}</span> out of {all_product.length}
+          <span>{items.length}</span> products in {category}
         </p>
         <div className="shopcategory-sort">
           Sort by <img src={dropdown_icon} alt="dropdown icon" />
@@ -60,12 +56,22 @@ export const ShopCategory = (props) => {
             className="shopcategory-product"
             key={index}
             onClick={() => navigate(`/product/${item.id}`)}
-            style={{ height: `${item.height}px` }} // Use precomputed height for each item
           >
             <img src={item.image} alt={item.name} />
+            <p>{item.name}</p>
+            <div className="shopcategory-product-details">
+              <div className="shopcategory-product-category">
+                {item.category}
+              </div>
+              <div className="shopcategory-product-price-old">
+                ${item.old_price}
+              </div>
+            </div>
           </div>
         ))}
       </Masonry>
     </div>
   );
 };
+
+export default ShopCategory;

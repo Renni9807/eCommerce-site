@@ -1,15 +1,15 @@
-import "./App.css";
-import { Navbar } from "./Components/Navbar/Navbar";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Shop } from "./Pages/Shop";
-import { ShopCategory } from "./Pages/ShopCategory";
-import { Product } from "./Pages/Product";
-import { Cart } from "./Pages/Cart";
-import { LoginSignup } from "./Pages/LoginSignup";
-import { Footer } from "./Components/Footer/Footer";
-import men_banner from "./Components/Assets/banner_men.png";
-import women_banner from "./Components/Assets/banner_women.png";
-import kid_banner from "./Components/Assets/banner_kid.png";
+import { Navbar } from "./Components/Navbar/Navbar";
+import Shop from "./Pages/Shop";
+import ShoesPage from "./Pages/ShoesPage";
+import ClothesPage from "./Pages/ClothesPage";
+import ShopCategory from "./Pages/ShopCategory";
+import Product from "./Pages/Product";
+import Cart from "./Pages/Cart";
+import LoginSignup from "./Pages/LoginSignup";
+import Footer from "./Components/Footer/Footer";
+import jewelry_banner from "./Components/Assets/jewelry.png"; // 이미지 경로가 올바른지 확인합니다.
 
 const App = () => {
   return (
@@ -18,21 +18,15 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />
+          <Route path="/clothes" element={<ClothesPage />} />
+          <Route path="/shoe" element={<ShoesPage />} />
           <Route
-            path="/clothes"
-            element={<ShopCategory banner={men_banner} category="clothes" />}
+            path="/jewelry"
+            element={
+              <ShopCategory banner={jewelry_banner} category="jewelry" />
+            }
           />
-          <Route
-            path="/women"
-            element={<ShopCategory banner={women_banner} category="women" />}
-          />
-          <Route
-            path="/kids"
-            element={<ShopCategory banner={kid_banner} category="kid" />}
-          />
-          <Route path="/product" element={<Product />}>
-            <Route path=":productId" element={<Product />} />
-          </Route>
+          <Route path="/product/:productId" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
         </Routes>
@@ -41,4 +35,5 @@ const App = () => {
     </div>
   );
 };
+
 export default App;

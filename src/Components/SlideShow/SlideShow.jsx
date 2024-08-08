@@ -1,23 +1,56 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import "./SlideShow.css";
 
-const SlideShow = ({ slides }) => {
+const SlideShow = ({ slides = [] }) => {
   const [current, setCurrent] = useState(0);
+  const [leaving, setLeaving] = useState(false);
+  const [entering, setEntering] = useState(false);
   const length = slides.length;
+  const isNavigatingRef = useRef(false);
+
+  const debounceNavigation = (callback) => {
+    if (isNavigatingRef.current) return;
+    isNavigatingRef.current = true;
+    callback();
+    setTimeout(() => {
+      isNavigatingRef.current = false;
+    }, 1200); // Debounce time greater than the animation time to prevent overlapping
+  };
 
   const nextSlide = useCallback(() => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  }, [current, length]);
+    debounceNavigation(() => {
+      setLeaving(true);
+      setTimeout(() => {
+        setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
+        setLeaving(false);
+        setEntering(true);
+        setTimeout(() => setEntering(false), 1000);
+      }, 1000);
+    });
+  }, [length]);
 
   const prevSlide = useCallback(() => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  }, [current, length]);
+    debounceNavigation(() => {
+      setLeaving(true);
+      setTimeout(() => {
+        setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
+        setLeaving(false);
+        setEntering(true);
+        setTimeout(() => setEntering(false), 1000);
+      }, 1000);
+    });
+  }, [length]);
 
   useEffect(() => {
-    const timer = setTimeout(nextSlide, 4000);
-    return () => clearTimeout(timer);
-  }, [nextSlide]);
+    const autoSlide = setTimeout(() => {
+      if (!isNavigatingRef.current) {
+        nextSlide();
+      }
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearTimeout(autoSlide);
+  }, [current, nextSlide]);
 
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
@@ -29,11 +62,17 @@ const SlideShow = ({ slides }) => {
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
       {slides.map((slide, index) => (
         <div
-          className={index === current ? "slide active" : "slide"}
+          className={`slide ${index === current ? "active" : ""} ${
+            leaving ? "slide-leaving" : ""
+          } ${entering ? "slide-entering" : ""}`}
           key={index}
         >
           {index === current && (
-            <img src={slide.image} alt="banner" className="slide-image" />
+            <img
+              src={slide.image}
+              alt={`Slide ${index + 1}`}
+              className="slide-image"
+            />
           )}
         </div>
       ))}

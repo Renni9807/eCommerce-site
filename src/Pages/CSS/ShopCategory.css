@@ -1,3 +1,10 @@
+/* Importing a font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .shop-category {
   width: 80%;
   display: flex;
@@ -15,10 +22,12 @@
   width: 100%;
   margin: 30px 0;
   justify-content: space-between;
+  font-size: 1.2rem; /* Adjust font size */
 }
 
 .shopcategory-indexSort span {
   font-weight: 700;
+  font-size: 1.3rem; /* Slightly larger to stand out */
 }
 
 .shopcategory-products {
@@ -60,6 +69,29 @@
   opacity: 0.9; /* Slight fade effect */
 }
 
+.shopcategory-product p {
+  font-size: 1rem; /* Adjust font size */
+  margin: 10px 0 5px;
+  text-align: center;
+}
+
+.shopcategory-product-details {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem; /* Adjust font size */
+}
+
+.shopcategory-product-category {
+  font-weight: 700;
+  color: #000;
+}
+
+.shopcategory-product-price-old {
+  text-decoration: line-through;
+  color: #999;
+}
+
 .shopcategory-loadmore {
   display: flex;
   align-items: center;
@@ -72,7 +104,7 @@
   background-color: #ededed;
   color: #898989;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Adjust font size */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
