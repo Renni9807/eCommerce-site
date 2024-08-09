@@ -32,3 +32,23 @@
 .collections img {
   width: 100%;
 }
+
+.new-collections {
+  padding: 1rem;
+}
+
+.collections {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (min-width: 769px) {
+  .collections {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+}

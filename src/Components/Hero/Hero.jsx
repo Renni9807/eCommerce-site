@@ -1,6 +1,5 @@
 import React from "react";
 import arrow_icon from "../Assets/arrow.png";
-import front_img from "../Assets/frontpage.png";
 import "./Hero.css";
 
 export const Hero = () => {
@@ -19,9 +18,6 @@ export const Hero = () => {
             <div>Latest Collection</div>
             <img src={arrow_icon} alt="arrow_icon" />
           </div>
-        </div>
-        <div className="hero-right">
-          <img src={front_img} alt="hero_image" />
         </div>
       </div>
     </div>

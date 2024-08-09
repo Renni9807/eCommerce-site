@@ -25,7 +25,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
   width: 720px;
   height: 70px;
   border-radius: 80px;
@@ -34,9 +33,9 @@
 
 .newsletter input {
   width: 500px;
-  margin-left: 30px;
   border: none;
   outline: none;
+  margin: 5px;
   color: #616161;
   font-family: Poppins;
   font-size: 1rem;
@@ -50,4 +49,46 @@
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.newsletter {
+  width: 90%;
+  height: auto;
+  text-align: center;
+}
+
+.newsletter div {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+
+.newsletter input,
+.newsletter button {
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .newsletter {
+    width: 65%;
+    height: 40vh;
+  }
+
+  .newsletter div {
+    flex-direction: row;
+    width: 720px;
+    height: 70px;
+  }
+
+  .newsletter input {
+    width: 500px;
+    margin-left: 30px;
+  }
+
+  .newsletter button {
+    width: 200px;
+  }
+  .newsletter div {
+    background-color: white;
+  }
 }

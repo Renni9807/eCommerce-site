@@ -45,3 +45,46 @@
   justify-content: flex-end;
   padding-top: 3rem;
 }
+
+.offers {
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  height: auto;
+}
+
+.offers-left h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.offers-left p,
+.offers-left button {
+  text-align: center;
+  margin: auto;
+}
+
+.offers-right {
+  justify-content: center;
+}
+
+@media (min-width: 769px) {
+  .offers {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .offers-left h1 {
+    font-size: 5rem;
+    text-align: left;
+  }
+
+  .offers-left p,
+  .offers-left button {
+    text-align: left;
+  }
+
+  .offers-right {
+    justify-content: flex-end;
+  }
+}
