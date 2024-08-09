@@ -80,6 +80,7 @@ let all_product = [
     name: "Safari Style Short Sleeve Shirt and Shorts Set",
     category: "clothes",
     image: p1_img,
+    size: "M, L, XL",
     new_price: 129.99,
     old_price: 159.99,
     description:
@@ -90,6 +91,7 @@ let all_product = [
     name: "Casual Summer Layered Look with Shorts",
     category: "clothes",
     image: p2_img,
+    size: "M, L, XL",
     new_price: 95.5,
     old_price: 130.0,
     description:
@@ -100,6 +102,7 @@ let all_product = [
     name: "Neutral Tone T-Shirt and Cargo Shorts Combo",
     category: "clothes",
     image: p3_img,
+    size: "S, M, L, XL",
     new_price: 75.0,
     old_price: 100.0,
     description:
@@ -110,6 +113,7 @@ let all_product = [
     name: "Light Blue Button-Down Shirt with Cargo Shorts",
     category: "clothes",
     image: p4_img,
+    size: "S, M, L, XL",
     new_price: 85.0,
     old_price: 110.0,
     description:
@@ -120,6 +124,7 @@ let all_product = [
     name: "Layered Beige Shirt and Shorts Ensemble",
     category: "clothes",
     image: p5_img,
+    size: "M, L, XL",
     new_price: 92.5,
     old_price: 125.0,
     description:
@@ -130,6 +135,7 @@ let all_product = [
     name: "Beige Overshirt with White Tee and Shorts Combo",
     category: "clothes",
     image: p6_img,
+    size: "S, M, L, XL",
     new_price: 97.5,
     old_price: 135.0,
     description:
@@ -140,6 +146,7 @@ let all_product = [
     name: "Men's Casual Summer Outfit",
     category: "clothes",
     image: p7_img,
+    size: "S, M, L, XL",
     new_price: 120.0,
     old_price: 150.0,
     description:
@@ -150,6 +157,7 @@ let all_product = [
     name: "White T-Shirt and Striped Pants Combo",
     category: "clothes",
     image: p8_img,
+    size: "S, M, L, XL",
     new_price: 60.0,
     old_price: 80.0,
     description:
@@ -160,6 +168,7 @@ let all_product = [
     name: "Black Mesh Top and Leather Pants Combo",
     category: "clothes",
     image: p9_img,
+    size: "M, L, XL",
     new_price: 150.0,
     old_price: 200.0,
     description:
@@ -170,6 +179,7 @@ let all_product = [
     name: "Beige Ribbed Sports Outfit",
     category: "clothes",
     image: p10_img,
+    size: "S, M, L, XL",
     new_price: 90.0,
     old_price: 120.0,
     description:
@@ -180,6 +190,7 @@ let all_product = [
     name: "Stylish Beachwear",
     category: "clothes",
     image: p11_img,
+    size: "M, L, XL",
     new_price: 110.0,
     old_price: 140.0,
     description:
@@ -190,6 +201,7 @@ let all_product = [
     name: "Black Top and Embroidered Skirt",
     category: "clothes",
     image: p12_img,
+    size: "S, M, L, XL",
     new_price: 110.0,
     old_price: 140.0,
     description:
@@ -200,6 +212,7 @@ let all_product = [
     name: "Off-Shoulder Top and Denim Skirt",
     category: "clothes",
     image: p13_img,
+    size: "M, L, XL",
     new_price: 85.0,
     old_price: 110.0,
     description:
@@ -210,6 +223,7 @@ let all_product = [
     name: "Striped Top with Faux Fur Stole",
     category: "clothes",
     image: p14_img,
+    size: "S, M, L, XL",
     new_price: 130.0,
     old_price: 170.0,
     description:
@@ -220,6 +234,7 @@ let all_product = [
     name: "White T-Shirt and Shorts with Brown Boots",
     category: "clothes",
     image: p15_img,
+    size: "M, L, XL",
     new_price: 120.0,
     old_price: 160.0,
     description:
@@ -230,6 +245,7 @@ let all_product = [
     name: "Plaid Blazer with Distressed Jeans",
     category: "clothes",
     image: p16_img,
+    size: "M, L, XL",
     new_price: 140.0,
     old_price: 190.0,
     description:
@@ -240,6 +256,7 @@ let all_product = [
     name: "Leather Jacket with Gray Trousers",
     category: "clothes",
     image: p17_img,
+    size: "S, M, L, XL",
     new_price: 180.0,
     old_price: 220.0,
     description:
@@ -250,6 +267,7 @@ let all_product = [
     name: "Casual Linen Ensemble",
     category: "clothes",
     image: p18_img,
+    size: "S, M, L, XL",
     new_price: 100.0,
     old_price: 130.0,
     description:
@@ -260,6 +278,7 @@ let all_product = [
     name: "Shearling Jacket with White Jeans",
     category: "clothes",
     image: p19_img,
+    size: "S, M, L, XL",
     new_price: 190.0,
     old_price: 240.0,
     description:
@@ -270,6 +289,7 @@ let all_product = [
     name: "Leopard Print Shirt with Sunglasses",
     category: "clothes",
     image: p20_img,
+    size: "S, M, L, XL",
     new_price: 75.0,
     old_price: 100.0,
     description:
@@ -280,6 +300,7 @@ let all_product = [
     name: "Recycled Fashion Statement",
     category: "clothes",
     image: p21_img,
+    size: "S, M, L, XL",
     new_price: 250.0,
     old_price: 300.0,
     description:
@@ -290,6 +311,7 @@ let all_product = [
     name: "Pink Faux Fur Coat with Sneakers",
     category: "clothes",
     image: p22_img,
+    size: "M, L, XL",
     new_price: 220.0,
     old_price: 270.0,
     description:
@@ -300,6 +322,7 @@ let all_product = [
     name: "White Oversized Blazer with Black Boots",
     category: "clothes",
     image: p23_img,
+    size: "M, L, XL",
     new_price: 120.0,
     old_price: 150.0,
     description:
@@ -310,6 +333,7 @@ let all_product = [
     name: "Light Gray Pantsuit Duo",
     category: "clothes",
     image: p24_img,
+    size: "M, L, XL",
     new_price: 150.0,
     old_price: 200.0,
     description:
@@ -320,6 +344,7 @@ let all_product = [
     name: "Casual Street Style with Mask",
     category: "clothes",
     image: p25_img,
+    size: "M, L, XL",
     new_price: 70.0,
     old_price: 90.0,
     description:
@@ -330,6 +355,7 @@ let all_product = [
     name: "Rustic Cityscape Brown Coat",
     category: "clothes",
     image: p26_img,
+    size: "S, M, L",
     new_price: 110.0,
     old_price: 150.0,
     description:
@@ -341,6 +367,7 @@ let all_product = [
     category: "clothes",
     image: p27_img,
     new_price: 80.0,
+    size: "S, M, L",
     old_price: 110.0,
     description:
       "A fashionable look featuring a leopard print skirt paired with a white tank top and white sneakers. The model is standing in front of a tall building, showcasing a perfect urban chic style. Total outfit cost: approximately $150.",
@@ -350,6 +377,7 @@ let all_product = [
     name: "Urban Style with Brown Sweater",
     category: "clothes",
     image: p28_img,
+    size: "S, M, L, XL",
     new_price: 95.0,
     old_price: 130.0,
     description:
@@ -361,6 +389,7 @@ let all_product = [
     category: "clothes",
     image: p29_img,
     new_price: 300.0,
+    size: "S, M, L",
     old_price: 400.0,
     description:
       "A beautiful bridal scene with two women in white wedding dresses, celebrating by the sea. The dresses are elegant and flowing, perfect for a romantic beach wedding. Total outfit cost: approximately $600 for both dresses.",
@@ -371,6 +400,7 @@ let all_product = [
     category: "clothes",
     image: p30_img,
     new_price: 25.0,
+    size: "S, M, L",
     old_price: 40.0,
     description:
       "A casual yet trendy look featuring a graphic tee with 'Current Mood' text and a black skirt. The model is accessorized with sunglasses, perfect for a laid-back day out. Total outfit cost: approximately $65.",
@@ -381,6 +411,7 @@ let all_product = [
     category: "clothes",
     image: p31_img,
     new_price: 40.0,
+    size: "S, M, L",
     old_price: 60.0,
     description:
       "A whimsical nighttime look with a white graphic tee and a blue skirt, adorned with fairy lights. The model is enjoying a night with city lights in the background, creating a dreamy atmosphere. Total outfit cost: approximately $100.",
@@ -390,6 +421,7 @@ let all_product = [
     name: "Traditional White Dress with Floral Design",
     category: "clothes",
     image: p32_img,
+    size: "S, M, L",
     new_price: 200.0,
     old_price: 250.0,
     description:
@@ -400,6 +432,7 @@ let all_product = [
     name: "Boxing Gear Set",
     category: "clothes",
     image: p33_img,
+    size: "S, M, L",
     new_price: 100.0,
     old_price: 130.0,
     description:
@@ -410,6 +443,7 @@ let all_product = [
     name: "Classic Business Attire",
     category: "clothes",
     image: p34_img,
+    size: "S, M, L, XL",
     new_price: 150.0,
     old_price: 200.0,
     description:
@@ -420,6 +454,7 @@ let all_product = [
     name: "Stylish Business Suit with Vest",
     category: "clothes",
     image: p35_img,
+    size: "S, M, L, XL",
     new_price: 180.0,
     old_price: 230.0,
     description:
@@ -430,6 +465,7 @@ let all_product = [
     name: "Casual Smart Look with Brown Sweater",
     category: "clothes",
     image: p36_img,
+    size: "S, M, L, XL",
     new_price: 120.0,
     old_price: 150.0,
     description:

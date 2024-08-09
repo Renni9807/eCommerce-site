@@ -1,30 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext"; // Adjusted import path
 import cart_icon from "../Assets/cart_icon.png";
 import "./Navbar.css";
 
 export const Navbar = () => {
-  const [hovered, setHovered] = useState("");
-  const handleMouseOn = (index) => {
-    setHovered(index);
-  };
-  const handleMouseOff = () => {
-    setHovered("");
-  };
-  const navMenuItems = ["Shop", "Clothes", "Shoe", "Jewelry"];
+  const { cart } = useContext(ShopContext);
+  const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
+  const displayCount = cartItemCount > 9 ? "9+" : cartItemCount;
+
   return (
     <div className="navbar">
       <div className="nav-logo">
         <p>LEAP</p>
       </div>
       <ul className="nav-menu">
-        {navMenuItems.map((item, index) => (
-          <li
-            key={index}
-            className={hovered === index ? "hovered" : ""}
-            onMouseEnter={() => handleMouseOn(index)}
-            onMouseLeave={handleMouseOff}
-          >
+        {["Shop", "Clothes", "Shoes", "Jewelry"].map((item, index) => (
+          <li key={index} className="">
             <Link
               to={
                 item.toLowerCase() === "shop" ? "/" : `/${item.toLowerCase()}`
@@ -43,7 +35,9 @@ export const Navbar = () => {
           <Link to="/cart">
             <img id="img-cart" src={cart_icon} alt="cart_icon" />
           </Link>
-          <div className="nav-cart-count">0</div>
+          {cartItemCount > 0 && (
+            <div className="nav-cart-count">{displayCount}</div>
+          )}
         </div>
       </div>
     </div>

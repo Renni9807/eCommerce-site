@@ -1,7 +1,5 @@
 import React, { useState, useContext } from "react";
 import { ShopContext } from "../../Context/ShopContext";
-import star_icon from "../Assets/star_icon.png";
-import star_dull_icon from "../Assets/star_dull_icon.png";
 import Modal from "../Modal/Modal";
 import "./ProductDisplay.css";
 
@@ -43,7 +41,7 @@ export const ProductDisplay = (props) => {
     }, []);
 
     if (itemsToAdd.length > 0) {
-      itemsToAdd.forEach((item) => addToCart(item));
+      itemsToAdd.forEach((item) => addToCart(item, item.quantity, item.size));
       setQuantities({
         S: 0,
         M: 0,
@@ -92,14 +90,6 @@ export const ProductDisplay = (props) => {
       </div>
       <div className="productdisplay-right">
         <h1>{product.name}</h1>
-        <div className="productdisplay-right-star">
-          <img src={star_icon} alt="" />
-          <img src={star_icon} alt="" />
-          <img src={star_icon} alt="" />
-          <img src={star_icon} alt="" />
-          <img src={star_dull_icon} alt="" />
-          <p>(122)</p>
-        </div>
         <div className="productdisplay-right-prices">
           <div className="productdisplay-right-price-old">
             ${product.old_price}
@@ -122,7 +112,7 @@ export const ProductDisplay = (props) => {
             </div>
           ))}
         </div>
-        <button Id="add-cart" onClick={handleAddToCart}>
+        <button id="add-cart" onClick={handleAddToCart}>
           ADD TO CART
         </button>
         <p className="productdisplay-right-category">

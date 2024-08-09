@@ -1,0 +1,29 @@
+.jewelry-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.blurred-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  filter: blur(8px); /* Blur effect */
+  opacity: 0.5; /* Reduce opacity */
+}
+
+.coming-soon {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  border-radius: 10px;
+}

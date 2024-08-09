@@ -1,3 +1,4 @@
+import React from "react";
 import whatsapp_icon from "../Assets/whatsapp_icon.png";
 import pintester_icon from "../Assets/pintester_icon.png";
 import instagram_icon from "../Assets/instagram_icon.png";

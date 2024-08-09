@@ -1,61 +1,67 @@
 .hero-bg {
-  background: linear-gradient(to bottom, #fff, rgb(52, 9, 92), #d3d3d3);
+  background-image: url("../Assets/frontpage.png"); /* Ensure background image is set */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
 }
 
 .hero {
-  width: 90vw;
-  margin: 0 auto;
+  position: relative;
+  z-index: 2;
   display: flex;
-}
-
-.hero-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 5rem;
+  color: white;
 }
 
 .hero-left h2 {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 700;
-}
-
-.hero-left p {
-  color: #171717;
-  font-size: 100px;
-  font-weight: 500;
-}
-
-.hero-hand-icon {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.hero-hand-icon img {
-  width: 7rem;
+  margin-bottom: 2rem;
 }
 
 .hero-latest-btn {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  width: 20rem;
-  height: 4.2rem;
-  padding: 0.5rem;
-  border-radius: 70px;
-  background-color: #ababab;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 500;
+  background-color: #282828; /* Darker button color */
+  padding: 1rem 2rem;
+  border-radius: 30px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.hero-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero-latest-btn img {
+  margin-left: 1rem;
+}
+
+.hero-latest-btn:hover {
+  background-color: #3e3e3e; /* Slightly lighter on hover */
+}
+
+.hero-latest-btn a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.hero-right img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
