@@ -6,13 +6,14 @@ import p10_img from "./product_4.png";
 let data_product = [
   {
     id: 1,
-    name: "Safari Style Short Sleeve Shirt and Shorts Set",
+    name: "Plaid Blazer with Distressed Jeans",
     category: "clothes",
     image: p1_img,
-    new_price: 129.99,
-    old_price: 159.99,
+    size: "M, L, XL",
+    new_price: 140.0,
+    old_price: 190.0,
     description:
-      "This safari-inspired outfit features a light beige short-sleeve shirt with two chest pockets, paired with matching khaki shorts. The ensemble is completed with a brown leather belt and brown leather dress shoes. The outfit is shown from front, side, and back views, showcasing its versatile and polished look. Perfect for a casual yet refined summer style. Total outfit cost (including shirt, shorts, belt, and shoes): approximately $200-$250, depending on the brand and quality of the items.",
+      "This edgy outfit features a blue plaid blazer paired with distressed jeans and white sneakers. Perfect for a stylish urban look. Total outfit cost: approximately $220.",
   },
   {
     id: 2,
@@ -36,13 +37,14 @@ let data_product = [
   },
   {
     id: 4,
-    name: "Beige Ribbed Sports Outfit",
+    name: "Light Blue Button-Down Shirt with Cargo Shorts",
     category: "clothes",
     image: p10_img,
-    new_price: 90.0,
-    old_price: 120.0,
+    size: "S, M, L, XL",
+    new_price: 85.0,
+    old_price: 110.0,
     description:
-      "This beige ribbed sports outfit includes a crop top and matching high-waisted shorts. The look is completed with a white headband and sunglasses. Perfect for a day at the beach or a casual summer outing. Total outfit cost: approximately $150.",
+      "A light blue short-sleeve button-down shirt paired with beige cargo shorts. The outfit is completed with casual beige sneakers. Total outfit cost: approximately $160.",
   },
 ];
 
