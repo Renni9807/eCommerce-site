@@ -71,6 +71,7 @@ body {
 
 .shopcategory-product p {
   font-size: 1rem; /* Adjust font size */
+  font-weight: 700;
   margin: 10px 0 5px;
   text-align: center;
 }
@@ -112,4 +113,10 @@ body {
 .shopcategory-loadmore:hover {
   background-color: #d4d4d4;
   color: #606060;
+}
+
+#sort {
+  border: none;
+  outline: none;
+  color: black;
 }

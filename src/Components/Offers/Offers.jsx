@@ -5,7 +5,7 @@ import "./Offers.css";
 export const Offers = () => {
   const scrollToCollections = () => {
     document
-      .getElementById("new-collections")
+      .getElementById("news-letter")
       .scrollIntoView({ behavior: "smooth" });
   };
 

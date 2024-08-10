@@ -10,7 +10,9 @@ const Breadcrumb = ({ product }) => {
         {product.category}
       </Link>{" "}
       &gt;
-      <span>{product.name}</span>
+      <Link to={`/product/${product.id}`}>
+        <span>{product.name}</span>
+      </Link>
     </nav>
   );
 };

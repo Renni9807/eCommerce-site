@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Popular.css";
 import data_product from "../Assets/data";
-import { Item } from "../Item/Item";
 
 export const Popular = () => {
   return (
@@ -9,19 +9,18 @@ export const Popular = () => {
       <h1>POPULAR IN WOMEN</h1>
       <hr />
       <div className="popular-item">
-        {data_product.map((item, index) => {
-          return (
-            <Item
-              key={index}
-              id={item.id}
-              name={item.name}
-              image={item.image}
-              new_price={item.new_price}
-              old_price={item.old_price}
-            />
-          );
-        })}
+        {data_product.map((item, index) => (
+          <Link to={`/product/${item.id}`} key={index} className="card">
+            <img src={item.image} alt={item.name} />
+            <div className="card-content">
+              <p>{item.name}</p>
+              <div className="price-old">${item.old_price}</div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
 };
+
+export default Popular;

@@ -10,20 +10,18 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  cursor: pointer; /* Added cursor style to indicate it's clickable */
 }
 
 .footer-logo p {
   color: #e0e0e0;
   font-size: 3rem;
   font-weight: 700;
+  transition: color 0.3s ease; /* Add a smooth transition for hover effect */
 }
 
-.footer-links {
-  display: flex;
-  list-style: none;
-  gap: 50px;
-  color: #252525;
-  font-size: 1.2rem;
+.footer-logo:hover p {
+  color: #fff; /* Change color on hover to give feedback */
 }
 
 .footer-link {

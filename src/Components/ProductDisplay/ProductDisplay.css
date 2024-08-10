@@ -7,6 +7,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Left side styling */
 .productdisplay-left {
   display: flex;
   flex-direction: column;
@@ -14,6 +15,7 @@
   width: 50%;
 }
 
+/* Image list styling */
 .productdisplay-img-list {
   display: flex;
   gap: 10px;
@@ -33,6 +35,7 @@
   transform: scale(1.1);
 }
 
+/* Main image styling */
 .productdisplay-img {
   display: flex;
   justify-content: center;
@@ -44,6 +47,7 @@
   border-radius: 10px;
 }
 
+/* Right side styling */
 .productdisplay-right {
   width: 45%;
   display: flex;
@@ -58,22 +62,7 @@
   margin: 0;
 }
 
-.productdisplay-right-star {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.productdisplay-right-star img {
-  width: 20px;
-  height: 20px;
-}
-
-.productdisplay-right-star p {
-  margin: 0;
-  font-size: 1rem;
-}
-
+/* Prices styling */
 .productdisplay-right-prices {
   display: flex;
   align-items: baseline;
@@ -92,12 +81,14 @@
   font-weight: bold;
 }
 
+/* Description styling */
 .productdisplay-right-description {
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
 }
 
+/* Size selection styling */
 .productdisplay-right-size {
   display: flex;
   flex-direction: column;
@@ -121,6 +112,7 @@
   font-size: 1rem;
 }
 
+/* Add to cart button styling */
 .productdisplay-right button {
   padding: 10px 20px;
   background-color: #e74c3c;
@@ -146,4 +138,67 @@
 
 #add-cart {
   width: 50%;
+}
+
+/* Media Queries */
+
+/* Large screens (1024px and below) */
+@media (max-width: 1024px) {
+  .productdisplay {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .productdisplay-left,
+  .productdisplay-right {
+    width: 100%; /* Full width for each section */
+  }
+
+  #add-cart {
+    width: 80%; /* Adjust cart button width */
+  }
+}
+
+/* Tablets and larger phones (768px and below) */
+@media (max-width: 768px) {
+  .productdisplay {
+    padding: 15px;
+  }
+
+  .productdisplay-main-img {
+    max-width: 300px; /* Adjust image size */
+  }
+
+  .productdisplay-right h1 {
+    font-size: 1.8rem;
+  }
+
+  .productdisplay-right-prices {
+    flex-direction: column; /* Stack prices vertically */
+    align-items: center;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .productdisplay {
+    padding: 10px;
+  }
+
+  .productdisplay-main-img {
+    max-width: 250px; /* Further adjust image size */
+  }
+
+  .productdisplay-right h1 {
+    font-size: 1.5rem;
+  }
+
+  .productdisplay-right-description {
+    font-size: 0.85rem;
+  }
+
+  #add-cart {
+    width: 100%; /* Full width for the cart button on small screens */
+  }
 }

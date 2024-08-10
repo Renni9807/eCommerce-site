@@ -1,11 +1,10 @@
 .hero-bg {
-  background-image: url("../Assets/frontpage.png"); /* Ensure background image is set */
+  background-image: url("../Assets/frontpage.png"); /* Add a background image */
   background-size: cover;
   background-position: center;
   position: relative;
   height: 100vh;
 }
-
 .hero-bg::before {
   content: "";
   position: absolute;
@@ -13,7 +12,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -29,81 +28,97 @@
 }
 
 .hero-left h2 {
-  font-size: 4rem;
+  font-size: 3rem; /* Reduced from 4rem */
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Reduced from 2rem */
 }
 
 .hero-latest-btn {
-  display: flex;
+  display: inline-flex; /* Changed from flex to inline-flex */
   align-items: center;
-  background-color: #282828; /* Darker button color */
-  padding: 1rem 2rem;
+  background-color: #282828;
+  padding: 0.75rem 1.5rem; /* Reduced padding */
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .hero-latest-btn img {
-  margin-left: 1rem;
+  margin-left: 0.5rem; /* Reduced from 1rem */
+  width: 20px; /* Added to control arrow size */
+  height: auto;
 }
 
 .hero-latest-btn:hover {
-  background-color: #3e3e3e; /* Slightly lighter on hover */
+  background-color: #3e3e3e;
 }
 
 .hero-latest-btn a {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduced from 1.2rem */
   font-weight: 600;
 }
 
-.hero-right img {
-  max-width: 600px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.hero-bg {
-  background-image: url("../Assets/frontpage.png");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: 100vh;
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0 1rem;
-  color: white;
-}
-
-.hero-left h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.hero-latest-btn {
-  padding: 0.5rem 1rem;
-}
-
-@media (min-width: 769px) {
+/* Media Queries */
+@media (max-width: 1024px) {
   .hero {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 5rem;
+    padding: 0 3rem;
   }
 
   .hero-left h2 {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
   .hero-latest-btn {
-    padding: 1rem 2rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .hero-latest-btn a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 2rem;
+  }
+
+  .hero-left h2 {
+    font-size: 2rem;
+  }
+
+  .hero-latest-btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-latest-btn a {
+    font-size: 0.8rem;
+  }
+
+  .hero-latest-btn img {
+    width: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 0 1rem;
+  }
+
+  .hero-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-latest-btn {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .hero-latest-btn a {
+    font-size: 0.7rem;
+  }
+
+  .hero-latest-btn img {
+    width: 12px;
   }
 }

@@ -1,77 +1,107 @@
 .newsletter {
-  width: 65%;
-  height: 40vh;
+  width: 70%;
+  padding: 2rem;
+  margin: 10rem auto;
+  background: linear-gradient(to top, #fff, #cdcaca);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
-  margin: 10rem auto;
-  background: linear-gradient(to top, #e8daef, #dcd0ff, #faf0ff);
-  gap: 2rem;
 }
 
 .newsletter h1 {
   color: #454545;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .newsletter p {
   color: #454545;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .newsletter div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 720px;
+  width: 100%;
+  max-width: 720px;
   height: 70px;
-  border-radius: 80px;
+  border-radius: 50px;
+  background-color: #fff;
   border: 1px solid #e3e3e3;
+  padding: 0; /* Removed padding here to align button and input perfectly */
 }
 
 .newsletter input {
-  width: 500px;
+  width: 65%;
   border: none;
   outline: none;
-  margin: 5px;
+  padding: 0 15px;
   color: #616161;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-size: 1rem;
+  border-radius: 50px 0 0 50px;
 }
 
 .newsletter button {
-  width: 200px;
-  height: 70px;
-  border-radius: 80px;
+  width: 35%; /* Adjusted width to fill the remaining space */
+  height: 100%;
+  border: none;
   background-color: #000;
   color: #fff;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  border-radius: 0 50px 50px 0;
+  transition: background-color 0.3s ease;
 }
 
-.newsletter {
-  width: 90%;
-  height: auto;
-  text-align: center;
+.newsletter button:hover {
+  background-color: #333;
 }
 
-.newsletter div {
-  width: 100%;
-  height: auto;
-  flex-direction: column;
-}
+@media (max-width: 768px) {
+  .newsletter h1 {
+    font-size: 2rem;
+  }
 
-.newsletter input,
-.newsletter button {
-  width: 100%;
+  .newsletter p {
+    font-size: 1rem;
+  }
+
+  .newsletter div {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .newsletter input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 50px;
+  }
+
+  .newsletter button {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+  }
 }
 
 @media (min-width: 769px) {
-  .newsletter {
-    width: 65%;
-    height: 40vh;
+  .newsletter h1 {
+    font-size: 3rem;
+  }
+
+  .newsletter p {
+    font-size: 1.5rem;
   }
 
   .newsletter div {
@@ -81,14 +111,13 @@
   }
 
   .newsletter input {
-    width: 500px;
-    margin-left: 30px;
+    width: 65%;
+    padding: 0 15px;
+    border-radius: 50px 0 0 50px;
   }
 
   .newsletter button {
-    width: 200px;
-  }
-  .newsletter div {
-    background-color: white;
+    width: 35%;
+    border-radius: 0 50px 50px 0;
   }
 }

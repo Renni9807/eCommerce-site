@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { ShopContext } from "../../Context/ShopContext"; // Adjusted import path
+import { ShopContext } from "../../Context/ShopContext";
 import cart_icon from "../Assets/cart_icon.png";
 import "./Navbar.css";
 
@@ -8,13 +8,21 @@ export const Navbar = () => {
   const { cart } = useContext(ShopContext);
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
   const displayCount = cartItemCount > 9 ? "9+" : cartItemCount;
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <div className="navbar">
       <div className="nav-logo">
         <p>LEAP</p>
       </div>
-      <ul className="nav-menu">
+      <div className="nav-menu-icon" onClick={toggleMenu}>
+        &#9776;
+      </div>
+      <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
         {["Shop", "Clothes", "Shoes", "Jewelry"].map((item, index) => (
           <li key={index} className="">
             <Link

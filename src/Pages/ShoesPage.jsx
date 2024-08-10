@@ -1,5 +1,5 @@
 import React from "react";
-import ShopCategory from "./ShopCategory"; // Correct import
+import ShopCategory from "./ShopCategory";
 
 import shoe_slide_1 from "../Components/Assets/shoe_slide_1.png";
 import shoe_slide_2 from "../Components/Assets/shoe_slide_2.png";

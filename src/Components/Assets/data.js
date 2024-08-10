@@ -35,7 +35,7 @@ let data_product = [
       "A simple yet stylish combination of a beige t-shirt and olive cargo shorts. The look is topped with a wide-brim hat and finished with beige sneakers. Total outfit cost: approximately $140.",
   },
   {
-    id: 10,
+    id: 4,
     name: "Beige Ribbed Sports Outfit",
     category: "clothes",
     image: p10_img,

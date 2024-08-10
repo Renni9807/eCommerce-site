@@ -6,7 +6,8 @@
   margin: 30px auto;
   max-width: 1200px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column; /* Stack header and items vertically */
+  gap: 20px; /* Adds space between header and items */
 }
 
 .cart-header {
@@ -14,7 +15,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Adds space between the header and cart items */
 }
 
 .cart-total {
@@ -26,17 +26,17 @@
 .cart-old-price {
   text-decoration: line-through;
   color: #888;
-  margin-bottom: 10px; /* Adds space between the old and new prices */
-  width: 100px; /* Fixed width */
-  text-align: right; /* Align text to the right */
+  margin-bottom: 10px;
+  width: 100px;
+  text-align: right;
 }
 
 .cart-new-price {
   font-size: 1.5rem;
   color: #e74c3c;
   font-weight: bold;
-  width: 100px; /* Fixed width */
-  text-align: right; /* Align text to the right */
+  width: 100px;
+  text-align: right;
 }
 
 .cart-items {
@@ -91,4 +91,101 @@
 
 .cart-item-controls button:hover {
   background-color: #ddd;
+}
+
+/* Media Queries */
+
+/* Large screens (1024px and below) */
+@media (max-width: 1024px) {
+  .cart {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .cart-header h1 {
+    font-size: 2rem;
+  }
+
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cart-item-new-price {
+    font-size: 1.4rem;
+  }
+}
+
+/* Tablets and larger phones (768px and below) */
+@media (max-width: 768px) {
+  .cart {
+    padding: 15px;
+  }
+
+  .cart-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .cart-item {
+    flex-direction: column; /* Stack image and details vertically */
+    align-items: center;
+  }
+
+  .cart-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cart-item-details {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-item-controls {
+    justify-content: center;
+  }
+
+  .cart-item-new-price {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .cart {
+    padding: 10px;
+  }
+
+  .cart-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-item-details {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-item-controls {
+    justify-content: center;
+  }
+
+  .cart-item-new-price {
+    font-size: 1.2rem;
+  }
+
+  .cart-old-price,
+  .cart-new-price {
+    text-align: center; /* Center-align prices */
+    width: auto;
+  }
 }

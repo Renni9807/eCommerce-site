@@ -5,10 +5,21 @@ import instagram_icon from "../Assets/instagram_icon.png";
 import "./Footer.css";
 
 export const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="footer">
-      <div className="footer-logo">
-        <p>REPPOHS</p>
+      <div
+        className="footer-logo"
+        onClick={scrollToTop}
+        style={{ cursor: "pointer" }}
+      >
+        <p>LEAP</p>
       </div>
       <ul className="footer-links">
         <li>Company</li>
